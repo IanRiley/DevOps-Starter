@@ -92,3 +92,7 @@ docker build --target prod --tag todo:prod .
 Docker run --env-file .env -p 5001:5001 todo:dev
 Docker run --env-file .env -p 5000:5000 todo:test tests
 Docker run --env-file .env -p 5000:5000 todo:prod
+
+## adding to HUB
+
+docker push etc...

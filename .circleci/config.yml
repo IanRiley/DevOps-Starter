@@ -1,0 +1,10 @@
+version: 2
+
+jobs:
+  build:
+    working_directory: ~/circleci-python
+    docker:
+      - image: iandriley/todo:prod
+    steps:
+      - checkout
+      - run: poetry run flask run -p 5001:5001

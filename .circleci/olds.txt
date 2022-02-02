@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/circleci-python
+    docker:
+      - image: "iandriley/todo:dev"
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Docker image
+          command: docker build -t $IMAGE_Name/dev
+          
+
+workflows:
+  build_dev:
+    jobs:
+      - build
+        filters:
+          branches:
+            

@@ -84,13 +84,17 @@ To run the tests individually in vscode run `>Python: Discover Tests` from the c
 ## Building the container
 
 docker build --target dev --tag todo:dev .
+
 docker build --target tst --tag todo:test .
+
 docker build --target prod --tag todo:prod .
 
 ## Running the container
 
 Docker run --env-file .env -p 5001:5001 todo:dev
+
 Docker run --env-file .env -p 5000:5000 todo:test tests
+
 Docker run --env-file .env -p 5000:5000 todo:prod
 
 ## adding to HUB
